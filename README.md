@@ -45,7 +45,7 @@ netDxf is compatible with any net version from Net Framework 4.0.
 If your desired version is not listed among the predefined frameworks manually edit the netdxf.csproj file and set the TargetFrameworks accordingly.
 When compiling for any of the Net Framework 4 family make sure that the constant NET4X is defined for your selected framework.
 ## Development Status 
-See [changelog.txt](https://github.com/haplokuon/netDxf/blob/master/doc/Changelog.txt) or the [wiki page](https://github.com/haplokuon/netDxf/wiki) for information on the latest changes.
+See [changelog.txt](https://github.com/jankozik/netDxf/blob/master/doc/Changelog.txt) or the [wiki page](https://github.com/jankozik/netDxf/wiki) for information on the latest changes.
 ## Supported DXF entities
 * 3dFace
 * Arc
