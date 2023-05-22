@@ -1,6 +1,6 @@
 ## Change history
 
-### [2023/04/27]
+### [2023/04/29]
 * Removed the taget frameworks netstandard2.1, netcoreapp3.1, and net5.0. Manually edit the netDxf.proj if you need them.
 * Reworked how the references to a TableObject are tracked. Now they are internally stored in a dictionary instead of a list. While this will make adding entities to the document a little slower removing them will be much faster. See the sample TableObjectReferences().
 * Add the method GetReferences to classes that inherit from TableObject. It returns the same list as the GetReferences method of its respective collection. See the sample TableObjectReferences().
@@ -17,7 +17,7 @@
 * Added an Arc constructor that takes a start point, an end point, and a bulge value to build the arc.
 * Added the methods MathHelper.ArcFromBulge and MathHelper.ArcToBulge.
 * The offset value for the AlignedDimension entity can now be positive or negative. The first and second reference point will not be swapped depending on the placement of the definition point, instead the sign of the offset will be changed.
-* The offset value for the LinearDimension entity can now be positive or negative. A negative offset is like adding 180บ to the dimension rotation. The first and second reference point will not be swapped depending on the placement of the definition point, instead the sign of the offset will be changed.
+* The offset value for the LinearDimension entity can now be positive or negative. A negative offset is like adding 180ยบ to the dimension rotation. The first and second reference point will not be swapped depending on the placement of the definition point, instead the sign of the offset will be changed.
 * The offset value for the Angular3PointDimension can now be posibive or negative. A negative offset will measure the oposite arc angle. The first and second reference point will not be swapped depending on the placement of the definition point, instead the sign of the offset will be changed.
 * Now it is posible to initialize a HatchBoundaryPath directly form a list of HatchBoundaryPath.Edges.
 * When converting a Polyline2D containing arc segments the precision value defines the number of divisions for a full circle, therefore, the final number of divisions for the arc will depend on the angle of the arc. This way small arcs will have less divisions than larger ones.
@@ -301,7 +301,7 @@ The MathHelper.NormalizeAngle method will check if the normalized angle is very 
 * (fixed) Adding and removing the annotation of a leader, when it already belongs to a document, will be automatically add and remove, respectively, the entity from the document.
 * (fixed) When cloning a Viewport the frozen layers were not being cloned.
 * (fixed) When writing a DXF the Tolerance code 73 is 0 for both Text and MText annotations.
-* (fixed) Radial and Diametric dimensions not showing the "R" and "ุ" when no prefix is use in the dimension style.
+* (fixed) Radial and Diametric dimensions not showing the "R" and "ร" when no prefix is use in the dimension style.
 * (fixed) The MLineStyleElements needs to be ordered from larger to smaller offset values.
 * (fixed) Bug when creating boundary paths for hatches when the normal was not the UnitZ (0,0,1).
 * (fixed) Only a single HatchBoundary.Edge of type Polyline can be used to initialize a hatch boundary, it also must always be closed.
